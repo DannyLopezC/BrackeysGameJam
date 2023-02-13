@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,12 +12,23 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 movement;
 
+    public Sprite upIdle;
+    public Sprite downIdle;
+    public Sprite rightIdle;
+    public Sprite leftIdle;
+
+    public SpriteRenderer spriteRenderer;
+
     // Update is called once per frame
     void Update()
     {
         // Input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        if (movement.x != 0) spriteRenderer.sprite = rightIdle;
+        else if (movement.y < 0) spriteRenderer.sprite = downIdle;
+        else if (movement.y < 0) spriteRenderer.sprite = upIdle;
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
