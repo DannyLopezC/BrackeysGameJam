@@ -474,6 +474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 700244677}
+  animator: {fileID: 700244679}
   movement: {x: 0, y: 0}
 --- !u!95 &700244679
 Animator:
