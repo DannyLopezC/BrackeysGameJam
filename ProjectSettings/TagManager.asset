@@ -44,6 +44,15 @@ TagManager:
   - name: Floor
     uniqueID: 1119975115
     locked: 0
+  - name: Wall
+    uniqueID: 3296119983
+    locked: 0
+  - name: Gem
+    uniqueID: 2525508433
+    locked: 0
+  - name: Object
+    uniqueID: 456831149
+    locked: 0
   - name: Player
     uniqueID: 3928330949
     locked: 0
